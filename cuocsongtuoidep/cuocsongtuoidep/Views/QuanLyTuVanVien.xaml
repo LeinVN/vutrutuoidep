@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False" 
+             x:Class="cuocsongtuoidep.QuanLyTuVanVien">
+                
+    <StackLayout>
+        <Label Text="Quản lý Tư vấn viên" FontSize="30" 
+                VerticalOptions= "Start" 
+                HorizontalOptions="CenterAndExpand" />
+        <Grid ColumnDefinitions="20,*,*,*,*,*,60" HeightRequest="60">
+            <Label Grid.Column="0" Text="ID" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="1" Text="Họ tên" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Grid.Column="2" Text="Ngày sinh" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Grid.Column="3" Text="Giới tính" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Grid.Column="4" Text="Điện thoại" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Grid.Column="5" Text="Trạng thái" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Grid.Column="6" Text="Thao tác" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            
+        </Grid>
+        <ListView x:Name = "lstTuvanvien">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="20,*,*,*,*,*,30,30">
+                            <Label x:Name="lblId" Grid.Column="0" Text="{Binding TuvanvienId}" HorizontalOptions="Center" ></Label>
+                            <Label x:Name="lblHoTen" Grid.Column="1" Text="{Binding TuvanvienName}"></Label>
+                            <Label x:Name="lblNgaySinh" Grid.Column="2" Text="{Binding TuvanvienDate}"></Label>
+                            <Label x:Name="lblGioiTinh" Grid.Column= "3" Text="{Binding TuvanvienGender}" HorizontalOptions="Center"></Label>
+                            <Label x:Name="lblDienThoai" Grid.Column="4" Text="{Binding TuvanvienPhone}"></Label>
+                            <Label x:Name="lblTinhTrang" Grid.Column="5" Text="{Binding TuvanvienEnabled}" HorizontalOptions="Center"></Label>
+                            <Button x:Name="btnSua" Clicked="btnSua_Clicked" Grid.Column="6" HorizontalOptions="Center" Text="!"/>
+                            <Button x:Name="btnXoa" Clicked="btnXoa_Clicked" Grid.Column="7" HorizontalOptions="Center"  Text="x"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnAdd" Clicked="btnAdd_Clicked" Text="+" FontSize="20" FontAttributes="Bold" WidthRequest="50" HeightRequest="50"
+                    CornerRadius="25" TextColor="White" BackgroundColor ="ForestGreen"  HorizontalOptions="CenterAndExpand" Padding="10"></Button>
+        </StackLayout>
+    </StackLayout>
+          
+</ContentPage>

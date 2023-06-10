@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="cuocsongtuoidep.MainPage">
+    // ContentPage.BindingContext>
+    //    viewModel: MainviewModel/>
+    // ContentPage.BindingContext>
+    
+        <StackLayout Spacing="0">
+            <Label Margin="0,120,0,10" Text="CHÀO BẠN !" TextColor="#FF5F9EA0"
+                FontSize="30" FontAttributes="Bold"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Mời bạn tiếp nhận năng lượng sạch vũ trụ và đón nhận" TextColor="#FF5F9EA0"
+                   FontSize="16"
+                   VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Image Margin="120" Source="icon_feed.png"/>
+            <Label Text="CUỘC SỐNG TƯƠI ĐẸP" TextColor="#FF5F9EA0"
+                FontSize="30" FontAttributes="Bold"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Tiếp theo >>" Padding="0" CornerRadius="25" HorizontalOptions="End" Margin="0,200,30,30"
+                    BorderColor="#FF5F9EA0" TextColor="White"
+                    Command="{Binding btnNextCommand}"/>
+        </StackLayout>
+      
+</ContentPage>

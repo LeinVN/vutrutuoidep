@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cuocsongtuoidep.Themtuvanvien">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Thêm Tư vấn viên mới" FontSize="30" 
+                VerticalOptions= "Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <Label Text="Họ tên:"/>
+                <Entry x:Name="txtHoten" WidthRequest="200"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Ngày sinh:"/>
+                <DatePicker x:Name="txtNgaysinh" WidthRequest="200"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Giới tính:"/>
+                <Picker x:Name="pkGioitinh" WidthRequest="100">
+                    <Picker.Items>
+                        <x:String>Nam</x:String>
+                        <x:String>Nữ</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Điện thoại:"/>
+                <Entry x:Name="txtDienthoai" WidthRequest="200"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Trạng thái"/>
+                <Picker x:Name="pkTrangthai" WidthRequest="200">
+                    <Picker.Items>
+                        <x:String>Hoạt động</x:String>
+                        <x:String>Vô hiệu</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnThem" Text="Ghi" TextColor="White" Clicked="btnThem_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
